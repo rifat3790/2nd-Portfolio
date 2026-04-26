@@ -1,21 +1,25 @@
 @import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html, body {
-  @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 overflow-x-hidden transition-colors duration-500;
+  @apply bg-gray-50 text-gray-900 dark:bg-[#0a0a0f] dark:text-gray-100 overflow-x-hidden transition-colors duration-500;
   scroll-behavior: smooth;
 }
 
+::selection {
+  @apply bg-cyan-500/30 text-cyan-100;
+}
+
 .glass-panel {
-  @apply bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-gray-200 dark:border-white/10 rounded-2xl p-6 transition-all duration-300;
+  @apply bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl p-6 transition-all duration-500 ease-out;
 }
 
 .glass-panel:hover {
-  @apply bg-white/80 dark:bg-white/10 border-cyan-500/30 dark:border-white/20 -translate-y-1 shadow-[0_10px_40px_-10px_rgba(0,229,255,0.2)] dark:shadow-[0_10px_40px_-10px_rgba(0,229,255,0.3)];
+  @apply bg-white/80 dark:bg-white/10 border-cyan-500/40 dark:border-white/20 -translate-y-2 shadow-[0_20px_40px_-15px_rgba(0,229,255,0.15)] dark:shadow-[0_20px_40px_-15px_rgba(0,229,255,0.25)];
 }
 
 .text-gradient {

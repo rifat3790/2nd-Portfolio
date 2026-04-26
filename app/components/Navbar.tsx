@@ -47,22 +47,22 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10 py-4 shadow-xl" : "bg-transparent py-6"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-white/80 dark:bg-[#0a0a0f]/80 backdrop-blur-2xl border-b border-gray-200 dark:border-white/10 py-4 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)]" : "bg-transparent py-6"}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-black text-gray-900 dark:text-white tracking-tighter">
-          Refayet<span className="text-cyan-600 dark:text-cyan-400">.</span>
+        <a href="#home" className="text-2xl font-black text-gray-900 dark:text-white tracking-tighter hover:scale-105 transition-transform duration-300 inline-block">
+          Refayet<span className="text-cyan-500 text-3xl leading-none">.</span>
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-8 items-center bg-white/50 dark:bg-white/5 px-6 py-2 rounded-full border border-gray-200/50 dark:border-white/10 backdrop-blur-md shadow-sm">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 dark:text-gray-300 font-bold hover:text-cyan-600 dark:hover:text-white relative group text-sm uppercase tracking-wide transition-colors"
+              className="text-gray-700 dark:text-gray-300 font-bold hover:text-cyan-600 dark:hover:text-cyan-400 relative group text-sm uppercase tracking-[0.1em] transition-colors"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full rounded-full"></span>
             </a>
           ))}
           

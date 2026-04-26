@@ -54,9 +54,10 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto relative z-10 overflow-hidden">
-      <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-        <span className="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2 block">Portfolio</span>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
+      <div className="text-center mb-16 relative" data-aos="fade-up" data-aos-duration="800">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/20 blur-[100px] rounded-full z-[-1]"></div>
+        <span className="text-cyan-400 font-bold uppercase tracking-[0.2em] text-sm mb-3 block">Portfolio</span>
+        <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tight">
           Featured <span className="text-gradient-alt">Projects</span>
         </h2>
         
@@ -85,59 +86,59 @@ export default function Projects() {
             data-aos="fade-up" 
             data-aos-delay={String((index % 8) * 100)}
             data-aos-duration="800"
-            className="project-card glass-panel flex flex-col h-full overflow-hidden group hover:border-cyan-500/50 p-0 transform transition-transform hover:-translate-y-2 relative"
+            className="project-card glass-panel flex flex-col h-full overflow-hidden group hover:border-cyan-500/50 p-0 transform transition-all duration-500 hover:-translate-y-3 relative"
           >
             {/* Show Featured/Pinned Badge if it is in pinned list */}
             {pinnedNames.includes(project.title) && (
               <div className="absolute top-0 left-0 z-30">
-                <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-[10px] font-bold px-3 py-1 rounded-br-lg shadow-lg">
+                <div className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-[10px] font-bold px-3 py-1 rounded-br-xl shadow-[0_4px_20px_rgba(0,229,255,0.4)] tracking-wider">
                   FEATURED
                 </div>
               </div>
             )}
 
-            <div className="w-full h-48 relative overflow-hidden bg-gray-900">
+            <div className="w-full h-56 relative overflow-hidden bg-gray-900 group-hover:scale-[1.02] transition-transform duration-500">
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10 opacity-80"></div>
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-full object-cover object-top transition-all duration-[4000ms] ease-in-out group-hover:object-bottom"
+                className="w-full h-full object-cover object-top transition-all duration-[5000ms] ease-in-out group-hover:object-bottom"
                 loading="lazy"
                 onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300?text=Project+Image' }}
               />
               <div className="absolute top-3 right-3 z-20">
-                <span className="px-2 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-semibold text-white uppercase tracking-wider">
+                <span className="px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-bold text-white uppercase tracking-wider">
                   {project.category}
                 </span>
               </div>
             </div>
             
-            <div className="p-5 flex flex-col flex-grow relative z-20 bg-gray-50/90 dark:bg-gray-950/50">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors line-clamp-1">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2 leading-relaxed">
+            <div className="p-6 flex flex-col flex-grow relative z-20 bg-gray-50/90 dark:bg-[#0f1115]/80 backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors line-clamp-1">{project.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-5 line-clamp-2 leading-relaxed">
                 {project.description}
               </p>
               
-              <div className="mb-4 flex flex-wrap gap-1 mt-auto">
+              <div className="mb-5 flex flex-wrap gap-2 mt-auto">
                 {project.techStack.slice(0, 3).map((tech: string, i: number) => (
-                  <span key={i} className="text-[10px] font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded border border-cyan-800/50">
+                  <span key={i} className="text-[10px] font-bold tracking-wide text-cyan-300 bg-cyan-900/40 px-2.5 py-1 rounded-md border border-cyan-800/60">
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 3 && (
-                  <span className="text-[10px] font-medium text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
+                  <span className="text-[10px] font-bold tracking-wide text-gray-400 bg-gray-800/60 px-2.5 py-1 rounded-md">
                     +{project.techStack.length - 3}
                   </span>
                 )}
               </div>
               
-              <div className="pt-3 border-t border-white/10 flex justify-between items-center mt-auto">
+              <div className="pt-4 border-t border-gray-200 dark:border-white/10 flex justify-between items-center mt-auto">
                 {project.liveLink ? (
-                  <a href={project.liveLink} target="_blank" rel="noreferrer" className="text-xs font-bold text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 flex items-center gap-1 transition-colors">
-                    View Live <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <a href={project.liveLink} target="_blank" rel="noreferrer" className="text-sm font-bold text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 flex items-center gap-2 transition-all group/link">
+                    View Live <span className="group-hover/link:translate-x-1.5 transition-transform">→</span>
                   </a>
                 ) : (
-                  <span className="text-xs text-gray-500">Private</span>
+                  <span className="text-sm text-gray-500 font-medium tracking-wide">Private Project</span>
                 )}
               </div>
             </div>

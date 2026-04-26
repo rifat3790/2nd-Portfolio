@@ -97,7 +97,7 @@ export default function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
         
         {/* Left Column - Text Content */}
-        <div ref={textRef} className="space-y-6 lg:pr-10">
+        <div ref={textRef} className="space-y-6 lg:pr-10 order-2 lg:order-1">
           <div className="hero-text-elem inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-cyan-500/30">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
             <span className="text-sm font-semibold text-gray-800 dark:text-cyan-100 uppercase tracking-wider">Available for new projects</span>
@@ -146,7 +146,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative flex justify-center lg:justify-end mt-12 lg:mt-0">
+        <div className="relative flex justify-center lg:justify-end mt-12 lg:mt-0 order-1 lg:order-2">
           <div ref={imageRef} className="relative w-72 h-72 md:w-96 md:h-96 z-10 flex items-center justify-center">
             
             {/* Glowing Morphing Backdrop */}

@@ -32,9 +32,10 @@ export default function About() {
 
   return (
     <section id="about" ref={aboutRef} className="py-20 px-6 max-w-7xl mx-auto w-full relative z-10 overflow-hidden">
-      <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-        <span className="text-cyan-500 dark:text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2 block">Discover</span>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
+      <div className="text-center mb-16 relative" data-aos="fade-up" data-aos-duration="800">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/20 blur-[100px] rounded-full z-[-1]"></div>
+        <span className="text-cyan-500 dark:text-cyan-400 font-bold uppercase tracking-[0.2em] text-sm mb-3 block">Discover</span>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tight">
           About <span className="text-gradient">Me</span>
         </h2>
       </div>
@@ -42,22 +43,22 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         
         {/* Main Bio - Spans 2 cols */}
-        <div className="bento-box glass-panel md:col-span-2 lg:col-span-2 row-span-2 flex flex-col justify-center bg-gradient-to-br from-white/60 to-white/30 dark:from-gray-900/80 dark:to-gray-900/40 relative overflow-hidden group hover:border-cyan-500/50">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/10 dark:bg-cyan-500/10 rounded-full blur-3xl -mr-20 -mt-20 transition-transform group-hover:scale-150 duration-700"></div>
+        <div className="bento-box glass-panel md:col-span-2 lg:col-span-2 row-span-2 flex flex-col justify-center bg-gradient-to-br from-white/60 to-white/30 dark:from-[#11131a]/90 dark:to-[#0a0a0f]/80 relative overflow-hidden group hover:border-cyan-500/50 p-8 md:p-10">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-400/10 dark:bg-cyan-500/15 rounded-full blur-[80px] -mr-20 -mt-20 transition-transform group-hover:scale-150 duration-700 pointer-events-none"></div>
           
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 z-10">
-            Driven by <span className="text-cyan-600 dark:text-cyan-400">Excellence</span> & <span className="text-purple-600 dark:text-purple-400">Innovation</span>
+          <h3 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-6 z-10 tracking-tight">
+            Driven by <span className="text-cyan-600 dark:text-cyan-400">Excellence</span> & <br className="hidden md:block" /><span className="text-purple-600 dark:text-purple-400">Innovation</span>
           </h3>
           
-          <div className="space-y-4 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed z-10">
+          <div className="space-y-5 text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed z-10">
             <p>
-              I am a passionate <strong className="text-cyan-600 dark:text-cyan-400 font-semibold">Web Developer & Team Leader</strong> specializing in crafting modern, responsive, and highly interactive digital experiences. I have successfully completed my <strong>B.Sc. in Computer Science & Engineering</strong> from Green University of Bangladesh.
+              I am a passionate <strong className="text-cyan-600 dark:text-cyan-400 font-bold">Web Developer & Team Leader</strong> specializing in crafting modern, responsive, and highly interactive digital experiences. I have successfully completed my <strong className="font-semibold text-gray-900 dark:text-gray-100">B.Sc. in Computer Science & Engineering</strong> from Green University of Bangladesh.
             </p>
             <p>
-              Currently, I am working at <strong>Softvence Agency</strong>, guiding teams to build premium digital solutions. My expertise spans across the MERN stack, Next.js, and advanced styling using Tailwind CSS.
+              Currently, I am working at <strong className="font-semibold text-gray-900 dark:text-gray-100">Softvence Agency</strong>, guiding teams to build premium digital solutions. My expertise spans across the MERN stack, Next.js, and advanced styling using Tailwind CSS.
             </p>
             <p>
-              I also possess deep experience in building high-converting e-commerce stores on <strong>Shopify</strong> using Liquid, as well as developing custom CMS architectures with <strong>Webflow</strong> and <strong>Wix</strong>.
+              I also possess deep experience in building high-converting e-commerce stores on <strong className="font-semibold text-gray-900 dark:text-gray-100">Shopify</strong> using Liquid, as well as developing custom CMS architectures with <strong className="font-semibold text-gray-900 dark:text-gray-100">Webflow</strong> and <strong className="font-semibold text-gray-900 dark:text-gray-100">Wix</strong>.
             </p>
           </div>
         </div>

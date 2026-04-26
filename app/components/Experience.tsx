@@ -22,9 +22,10 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-20 px-6 max-w-7xl mx-auto w-full relative z-10">
-      <div className="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
-        <span className="text-cyan-500 dark:text-cyan-400 font-bold uppercase tracking-widest text-sm mb-2 block">Career & Education</span>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
+      <div className="text-center mb-16 relative" data-aos="fade-up" data-aos-duration="800">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 blur-[100px] rounded-full z-[-1]"></div>
+        <span className="text-cyan-500 dark:text-cyan-400 font-bold uppercase tracking-[0.2em] text-sm mb-3 block">Career & Education</span>
+        <h2 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 tracking-tight">
           My <span className="text-gradient">Journey</span>
         </h2>
       </div>
@@ -39,21 +40,21 @@ export default function Experience() {
             data-aos-duration="800"
           >
             {/* Timeline Dot */}
-            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_10px_#00e5ff] border-2 border-gray-950"></div>
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_15px_#00e5ff] border-2 border-gray-950 z-10 before:absolute before:inset-0 before:bg-cyan-400 before:rounded-full before:animate-ping before:opacity-50"></div>
             
-            <div className="glass-panel group hover:border-cyan-500/50 transition-colors">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+            <div className="glass-panel group hover:border-cyan-500/50 hover:bg-white/60 dark:hover:bg-[#11131a]/80 transition-all duration-500 p-8">
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-5">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">{exp.role}</h3>
-                  <p className="text-purple-600 dark:text-purple-400 font-semibold text-lg">{exp.company}</p>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors tracking-tight">{exp.role}</h3>
+                  <p className="text-purple-600 dark:text-purple-400 font-bold text-lg mt-1">{exp.company}</p>
                 </div>
-                <div className="mt-2 md:mt-0">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 text-sm font-bold border border-cyan-200 dark:border-cyan-800/50 shadow-sm">
+                <div className="mt-4 md:mt-0">
+                  <span className="inline-block px-5 py-2 rounded-xl bg-gradient-to-r from-cyan-100 to-white dark:from-cyan-900/30 dark:to-cyan-900/10 text-cyan-700 dark:text-cyan-300 text-sm font-bold border border-cyan-200 dark:border-cyan-800/50 shadow-sm tracking-wide">
                     {exp.duration}
                   </span>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base md:text-lg">
                 {exp.description}
               </p>
             </div>
